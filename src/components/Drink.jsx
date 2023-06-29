@@ -21,10 +21,12 @@ export default function Drink() {
 <button onClick={ () => setDrinkType ('dessert')}>Dessert</button>
 <button onClick={ () => setDrinkType ('port')}>Port</button>
             </nav>
-<div>
-    <button onClick={ ()=> getDrink(drinkType)}>getDrink</button>
+<div className="button-getdrink">
+
+    <button onClick={ ()=> getDrink(drinkType)}>Get Drink</button>
 </div>
 
+<div className="drink-container">
 
             <h2>{drinkType}</h2>
             <div className="drink-list">
@@ -32,8 +34,9 @@ export default function Drink() {
                     !drinkList
                     ?<p>No Drink</p>
                     :drinkList.map( (element, index) => {
+                        
                         return (
-                            <div key={index}>
+                            <div key={index} className="hover-effect">
                                 <img src={element.image} alt="cover"/>
                                  <h3>{element.wine}</h3>
                                  <p>Location: {element.location}</p>
@@ -42,7 +45,7 @@ export default function Drink() {
                                 </div>);
                     })
                 }
-
+                </div>
             </div>
         </section>
     )
