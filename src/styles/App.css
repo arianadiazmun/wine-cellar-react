@@ -13,7 +13,7 @@
             }
 
 
-            h1, h2 ,h3, p {
+            h1, h2 ,h3, p,footer {
               text-align: center;
             }
 
@@ -62,3 +62,7 @@
       margin: 0% auto;
       display: block;
     }
+body {
+  background: rgb(186,150,210);
+  background: linear-gradient(90deg, rgba(186,150,210,1) 0%, rgba(215,144,144,1) 50%, rgba(252,176,69,1) 100%);
+}
